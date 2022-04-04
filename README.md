@@ -1,24 +1,33 @@
-# README
+# Rails REST API application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple implementation using Twitter and OpenWeatherMap API. 
 
-Things you may want to cover:
+## Install
 
-* Ruby version
+    $ git clone https://github.com/fss6/desafio-hexacta-api.git
+    $ cd desafio-hexacta-api
+    $ rename config/application.example.yml to config/application.yml
+    $ assign your credentials in config/application.yml
+    $ docker-compose build 
 
-* System dependencies
+## Run the app
 
-* Configuration
+    $ docker-compose up
 
-* Database creation
+# REST API
 
-* Database initialization
+### Get current weather
 
-* How to run the test suite
+`POST /weather?city=CITY_NAME` or `POST /preview?lat=LATITUDE&lon=LONGITUDE`
 
-* Services (job queues, cache servers, search engines, etc.)
+### Get weather forecast
 
-* Deployment instructions
+`POST /preview?city=CITY_NAME` or `POST /preview?lat=LATITUDE&lon=LONGITUDE`
 
-* ...
+### Twitter preview message
+
+`GET /preview?city=CITY_NAME` or `GET /preview?lat=LATITUDE&lon=LONGITUDE`
+
+### Twitter send message
+
+`POST /preview?city=CITY_NAME` or `POST /preview?lat=LATITUDE&lon=LONGITUDE`
