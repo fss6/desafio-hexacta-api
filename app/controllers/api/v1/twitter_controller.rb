@@ -1,10 +1,9 @@
 class Api::V1::TwitterController < ApplicationController
-
   def preview_message
     begin
-      message = create_message()
+      message = create_message
       response = { twitter: message }
-    rescue => e
+    rescue StandardError => e
       @status = :internal_server_error
       response = { error: e.message }
     end
@@ -13,9 +12,9 @@ class Api::V1::TwitterController < ApplicationController
 
   def send_message
     begin
-      message = create_message()
+      message = create_message
       response = $twitter_client.update(message)
-    rescue => e
+    rescue StandardError => e
       @status = :internal_server_error
       response = { error: e.message }
     end
@@ -23,6 +22,7 @@ class Api::V1::TwitterController < ApplicationController
   end
 
   private
+
   def create_message
     current_weather = $openweathermap.current(@location)
     forecast = $openweathermap.forecast(@location)
