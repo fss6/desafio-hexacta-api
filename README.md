@@ -9,6 +9,15 @@ Simple implementation using Twitter and OpenWeatherMap API.
     $ rename config/application.example.yml to config/application.yml
     $ assign your credentials in config/application.yml
     $ docker-compose build 
+    
+### Application credentials (config/application.yml)
+    
+* open_weather_map_api_key: OpenWeatherMap API credentials (for more details: https://openweathermap.org/)
+* twitter_consumer_key: Twitter API credentials (for more details: https://developer.twitter.com/)
+* twitter_consumer_secret: Twitter API credentials (for more details: https://developer.twitter.com/)
+* twitter_access_token: Twitter API credentials (for more details: https://developer.twitter.com/)
+* twitter_access_token_secret: Twitter API credentials (for more details: https://developer.twitter.com/)
+* twitter_bearer_token: Twitter API credentials (for more details: https://developer.twitter.com/)   
 
 ## Run the app
 
