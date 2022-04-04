@@ -30,4 +30,4 @@ Simple implementation using Twitter and OpenWeatherMap API.
 
 ### Twitter send message
 
-`POST /preview?city=CITY_NAME` or `POST /preview?lat=LATITUDE&lon=LONGITUDE`
+`POST /twitter?city=CITY_NAME` or `POST /twitter?lat=LATITUDE&lon=LONGITUDE`
