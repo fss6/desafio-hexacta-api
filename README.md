@@ -40,11 +40,11 @@ Simple implementation using Twitter and OpenWeatherMap API.
 
 ### Get current weather
 
-`POST /weather?city=CITY_NAME` or `POST /preview?lat=LATITUDE&lon=LONGITUDE`
+`POST /weather?city=CITY_NAME` or `POST /weather?lat=LATITUDE&lon=LONGITUDE`
 
 ### Get weather forecast
 
-`POST /preview?city=CITY_NAME` or `POST /preview?lat=LATITUDE&lon=LONGITUDE`
+`POST /forecast?city=CITY_NAME` or `POST /forecast?lat=LATITUDE&lon=LONGITUDE`
 
 ### Twitter preview message
 
